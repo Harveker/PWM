@@ -90,7 +90,7 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -98,7 +98,12 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    for (size_t i = 0; i < 100; i++)
+    {
+      htim4.Instance->CCR1 = htim4.Instance->ARR*i/100;
+      HAL_Delay(10);
+    }
+    
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
