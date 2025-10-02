@@ -100,12 +100,26 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    for (size_t i = 0; i < 100; i++)
+    HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1); // start PWM on channel 1
+    HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2); // start PWM on
+    if (button_release(GPIOB, GPIO_PIN_15, 1)
     {
-      htim4.Instance->CCR1 = htim4.Instance->ARR*i/100;
-      HAL_Delay(10);
+      htim4.Instance->CCR1 += STEP_PWM; // set the duty cycle
+    } else if (button_release(GPIOB, GPIO_PIN_13, 1))
+    {
+      htim4.Instance->CCR1 -= STEP_PWM; // set the duty cycle
+    } else
+    {
+      /* code */
     }
     
+    //HAL_Delay(2000);                          // wait for 2 seconds
+    HAL_TIM_PWM_Stop(&htim4, TIM_CHANNEL_1);  // stop PWM on
+    HAL_TIM_PWM_Stop(&htim4, TIM_CHANNEL_2);  // stop PWM on
+    //HAL_Delay(2000);                          // wait for 2 seconds
+    /* for (int i = 0; i <= 100; i+=5){
+    htim4.Instance-> CRR1 = (htim4.Instance-> ARR*i)/100; // set the duty cycle
+    } */
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
