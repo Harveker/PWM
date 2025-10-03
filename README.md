@@ -1,7 +1,3 @@
-Here’s a recommended README.md for your repository Harveker/PWM, based on its language composition (primarily C with some Assembly and CMake). If you have more information about the project's purpose or functionality, let me know and I can refine it further!
-
----
-
 # PWM
 
 [![Languages](https://img.shields.io/badge/C-97%25-blue)](https://github.com/Harveker/PWM)
