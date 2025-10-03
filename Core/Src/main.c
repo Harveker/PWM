@@ -100,6 +100,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+    /* USER CODE BEGIN 3 */
     HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1); // start PWM on channel 1
     HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2); // start PWM on
     if (button_release(GPIOB, GPIO_PIN_15, 1)
@@ -120,7 +121,7 @@ int main(void)
     /* for (int i = 0; i <= 100; i+=5){
     htim4.Instance-> CRR1 = (htim4.Instance-> ARR*i)/100; // set the duty cycle
     } */
-    /* USER CODE BEGIN 3 */
+    
   }
   /* USER CODE END 3 */
 }
