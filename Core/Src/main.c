@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "button.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -44,7 +45,7 @@ TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim4;
 
 /* USER CODE BEGIN PV */
-#define MAX_PWM 941
+#define MAX_PWM 941;
 #define MIN_PWM 0;
 #define STEP_PWM 118; // 12,5% of 941
 /* USER CODE END PV */
