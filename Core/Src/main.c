@@ -201,7 +201,7 @@ static void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 1600-1;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 200-1;
+  htim3.Init.Period = 200-1;  // 20ms
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
@@ -355,7 +355,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     {
       if (htim4.Instance->CCR1 + 9 <= MAX_PWM)
       {
-        htim4.Instance->CCR1 += 9;
+        htim4.Instance->CCR1 += 9;  // about 1% of 941
+        //given that the TIM3 is 20ms, this will make a fade in of about 2 second
       }
       else
       {
@@ -367,7 +368,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     {
       if (htim4.Instance->CCR1 - 5 >= MIN_PWM)
       {
-        htim4.Instance->CCR1 -= 5;
+        htim4.Instance->CCR1 -= 5;  // about 0.5% of 941
+        //given that the TIM3 is 20ms, this will make a fade out of about 4 second
       }
       else
       {
