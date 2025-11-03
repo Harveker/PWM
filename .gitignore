@@ -9,8 +9,7 @@ build/
 *.lst
 *.su
 
-# IDE specific files
-.vscode/
+# IDE specific files (except .vscode which is sanitized and useful)
 .idea/
 *.swp
 *.swo
