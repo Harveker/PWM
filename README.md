@@ -57,7 +57,7 @@ This repository has been secured with:
 - Privacy-focused IDE configuration without absolute paths
 - Security guidelines in [SECURITY.md](SECURITY.md)
 
-**Note**: Historical git commits may contain email addresses. See [GIT_HISTORY_CLEANUP.md](GIT_HISTORY_CLEANUP.md) for information on managing git history privacy.
+**Note**: Historical git commits contain a personal email address. See [GIT_HISTORY_CLEANUP.md](GIT_HISTORY_CLEANUP.md) for information on managing git history privacy.
 
 ## License
 

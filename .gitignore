@@ -9,7 +9,8 @@ build/
 *.lst
 *.su
 
-# IDE specific files (except .vscode which is sanitized and useful)
+# IDE specific files
+# Note: .vscode is intentionally tracked (sanitized and safe for sharing)
 .idea/
 *.swp
 *.swo
