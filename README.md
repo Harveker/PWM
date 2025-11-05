@@ -48,10 +48,17 @@ Provide details here about how to run or use your project, including sample comm
 
 Pull requests are welcome. For significant changes, please open an issue first to discuss what you would like to change.
 
+Please read [SECURITY.md](SECURITY.md) for security guidelines and best practices.
+
+## Security & Privacy
+
+This repository has been secured with:
+- Comprehensive `.gitignore` to prevent accidental commits of sensitive files
+- Privacy-focused IDE configuration without absolute paths
+- Security guidelines in [SECURITY.md](SECURITY.md)
+
+**Note**: Historical git commits contain a personal email address. See [GIT_HISTORY_CLEANUP.md](GIT_HISTORY_CLEANUP.md) for information on managing git history privacy.
+
 ## License
 
 Specify the license here. (e.g., MIT, GPL-3.0, etc.)
-
----
-
-Would you like me to create and push this README.md to your repository? If you want to add a project description, usage details, or licensing, please provide them!
